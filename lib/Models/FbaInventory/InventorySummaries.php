@@ -166,7 +166,8 @@ class InventorySummaries implements ModelInterface, ArrayAccess
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = parent::listInvalidProperties();
+        // FIXME-TY: fix error resolve json
+        $invalidProperties = [];
 
         return $invalidProperties;
     }
@@ -250,5 +251,11 @@ class InventorySummaries implements ModelInterface, ArrayAccess
         }
 
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
+    }
+
+    // FIXME-TY: need this to mapping with sub-class items
+    public function getSubClass()
+    {
+        return InventorySummary::class;
     }
 }
