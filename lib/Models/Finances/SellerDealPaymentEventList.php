@@ -167,7 +167,8 @@ class SellerDealPaymentEventList implements ModelInterface, ArrayAccess, Iterabl
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = parent::listInvalidProperties();
+        // FIXME-TY: remove parent check
+        $invalidProperties = [];
 
         return $invalidProperties;
     }

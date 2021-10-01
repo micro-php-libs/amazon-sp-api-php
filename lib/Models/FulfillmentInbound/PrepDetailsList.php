@@ -167,7 +167,8 @@ class PrepDetailsList implements ModelInterface, ArrayAccess, IterableType
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = parent::listInvalidProperties();
+        // FIXME-TY: remove parent check
+        $invalidProperties = [];
 
         return $invalidProperties;
     }

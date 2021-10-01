@@ -167,7 +167,8 @@ class SKUInboundGuidanceList implements ModelInterface, ArrayAccess, IterableTyp
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = parent::listInvalidProperties();
+        // FIXME-TY: remove parent check
+        $invalidProperties = [];
 
         return $invalidProperties;
     }

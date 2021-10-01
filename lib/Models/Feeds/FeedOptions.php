@@ -166,7 +166,8 @@ class FeedOptions implements ModelInterface, ArrayAccess
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = parent::listInvalidProperties();
+        // FIXME-TY: remove parent check
+        $invalidProperties = [];
 
         return $invalidProperties;
     }
